@@ -1,7 +1,7 @@
 import Image from 'next/image';
 // import { firebase } from '../config';
-import firebase from 'firebase';
-import { useEffect, useState } from 'react';
+// import firebase from 'firebase';
+// import { useEffect, useState } from 'react';
 
 export default function Footer() {
     // const [data, setData] = useState({});

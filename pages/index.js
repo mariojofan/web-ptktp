@@ -51,8 +51,8 @@ export default function Home() {
               <div className='w-full lg:w-3/6 py-6 text-center flex justify-center'>
                 <a href='/'>
                     <Image 
-                        // src='/images/Illustrations/illustration1.svg'
-                        src={encodeURIComponent(data.Illustration1)}
+                        src='/images/Illustrations/illustration1.svg'
+                        // src={encodeURIComponent(data.Illustration1)}
                         width={600} 
                         height={500}
                     />
