@@ -12,7 +12,7 @@ export default function Button({ children, className, variant}) {
 
     return (
        <>
-        <button class={`mx-auto lg:mx-0 hover:underline font-bold rounded-lg my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out ${addClassName} ${chooseVariant}`}>
+        <button className={`mx-auto lg:mx-0 hover:underline font-bold rounded-lg my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out ${addClassName} ${chooseVariant}`}>
             {children}
         </button>
        </>

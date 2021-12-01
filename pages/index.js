@@ -1,33 +1,33 @@
 import Image from 'next/image';
 import Layout from '../Layout';
 import { H1, Button } from '../components';
-// import { firebase } from '../config';
-// import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import { firebase } from '../config';
 
 export default function Home() {
-  //   const [data, setData] = useState({})
+    const [data, setData] = useState({})
 
-  //   // const [photo, setPhoto] = useState({uri : "https://firebasestorage.googleapis.com/v0/b/ptktp-a9358.appspot.com/o/Illustrations%2Fillustration1.svg?alt=media&token=11cb5ee8-492e-4234-91eb-70bf83234f49"})
-  //   const [title1, setTitle1] = useState('')
-  //   const [desc, setDesc] = useState('')
+    // const [photo, setPhoto] = useState({uri : "https://firebasestorage.googleapis.com/v0/b/ptktp-a9358.appspot.com/o/Illustrations%2Fillustration1.svg?alt=media&token=11cb5ee8-492e-4234-91eb-70bf83234f49"})
+    const [title1, setTitle1] = useState('')
+    const [desc, setDesc] = useState('')
 
 
-  //   useEffect(() => {
-  //     //memanggil firebase
-  //     firebase
-  //     //memanggil realtime database
-  //     .database()
-  //     //referensi ke hero
-  //     .ref('Hero')
-  //     //memanggil data dari referensi hero sebanyak 1 kali
-  //     .once('value')
-  //     //jika berhasil buat response dari value
-  //     .then(response => {
-  //       console.log('response : ', response.val());
-  //       setData(response.val());
-  //     })
+    useEffect(() => {
+      //memanggil firebase
+      firebase
+      //memanggil realtime database
+      .database()
+      //referensi ke hero
+      .ref('Hero')
+      //memanggil data dari referensi hero sebanyak 1 kali
+      .once('value')
+      //jika berhasil buat response dari value
+      .then(response => {
+        console.log('response : ', response.val());
+        setData(response.val());
+      })
      
-  //  },[]) 
+   },[]) 
 
   return (
       <Layout className='bg-gradient-to-r from-primary-500 to-third-500 static md:fixed w-full z-50'>
@@ -36,11 +36,11 @@ export default function Home() {
             <div className='whitespace-normal container px-3 mx-auto flex flex-col lg:flex-row items-center'>
               {/* <!--Left Col--> */}
               <div className='flex flex-col w-full lg:w-4/6 justify-center text-center lg:text-left'>
-                <h1 className='text-white font-bold my-4 text-4xl md:text-5xl leading-tight lg:text-3xl lg:w-4/6 lg:mx-10 xl:w-3/6 2xl:text-5xl 2xl:w-4/6'>
-                {/* {data.title1} */}dfdfdfdfdfdfdfdfdf
+                <h1 className='text-white font-bold my-4 text-4xl md:text-5xl leading-tight lg:text-4xl lg:w-4/6 lg:mx-10 xl:w-3/6 2xl:text-5xl 2xl:w-4/6'>
+                {data.title1}Change The World With Your Technology
                 </h1>
                 <p className='leading-normal text-base mb-8 text-white lg:mx-10 lg:w-5/6 xl:w-4/6 2xl:w-3/6'>
-                {/* {data.desc} */}dfdfdfdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+                {/* {data.desc} */}Kami hadir memberikan solusi di bidang IT untuk meningkatkan Proses Bisnis Perusahaan
                 </p>
                 <div className='lg:space-x-10 flex flex-col flex-wrap lg:flex-row mx-10'>
                 <Button type='button' variant='button1' >Tentang Kami</Button>
